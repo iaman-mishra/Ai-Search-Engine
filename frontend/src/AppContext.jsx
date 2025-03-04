@@ -6,7 +6,7 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [platform, setPlatform] = useState("google");
+  const [platform, setPlatform] = useState("ai");
   const [searchResults, setSearchResults] = useState([]);
 
   const fetchSearchResults = async () => {
@@ -16,8 +16,8 @@ export const AppContextProvider = ({ children }) => {
         const googleApiKey = import.meta.env.VITE_GOOGLE_CUSTOM_SEARCH_ENGINE_KEY;
         const googleCx = import.meta.env.VITE_GOOGLE_CUSTOM_SEARCH_ENGINE_CX;
 
-        const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchQuery}&key=${youtubeApiKey}&maxResults=10`;
-        const googleUrl = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}&key=${googleApiKey}&cx=${googleCx}`;
+        const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchQuery}&key=${youtubeApiKey}&maxResults=100`;
+        const googleUrl = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}&key=${googleApiKey}&cx=${googleCx}&maxResults=100`;
 
         const [youtubeResponse, googleResponse] = await Promise.all([
           axios.get(youtubeUrl),

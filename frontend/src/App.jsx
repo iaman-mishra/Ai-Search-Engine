@@ -1,17 +1,15 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import Navbar from "./components/Navbar";
 import { AppContext } from "./AppContext";
-import ResultCard from "./components/resultCard.jsx";
+import ResultCard from "./components/ResultCard";
 // import GoogleCard from "./components/GoogleCard";
 
 const App = () => {
-
   const { platform, setPlatform, searchResults } = useContext(AppContext);
 
   const handlePlatformChange = (e) => {
     setPlatform(e.target.id);
   };
-
 
   return (
     <>
@@ -25,6 +23,20 @@ const App = () => {
                 <input
                   type="radio"
                   name="platform"
+                  id="ai"
+                  className="w-4 h-4"
+                  checked={platform === "ai"}
+                  onChange={handlePlatformChange}
+                />
+                <label htmlFor="ai" className="text-gray-700">
+                  AI
+                </label>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="platform"
                   id="google"
                   className="w-4 h-4"
                   checked={platform === "google"}
@@ -34,19 +46,7 @@ const App = () => {
                   Google
                 </label>
               </div>
-              <div className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name="platform"
-                  id="linkedin"
-                  className="w-4 h-4"
-                  checked={platform === "linkedin"}
-                  onChange={handlePlatformChange}
-                />
-                <label htmlFor="linkedin" className="text-gray-700">
-                  LinkedIn
-                </label>
-              </div>
+
               <div className="flex items-center gap-2">
                 <input
                   type="radio"
@@ -65,10 +65,16 @@ const App = () => {
 
           <div className="p-4 flex flex-col w-full shadow-md rounded-md bg-gray-100">
             <h1 className="text-xl font-semibold mb-6">Search Results</h1>
-            <div className={`flex flex-col justify-between ${platform === "youtube" ? "grid sm:grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4" : "flex-row"}`}>
+            <div
+              className={`flex flex-col justify-between ${
+                platform === "youtube"
+                  ? "grid sm:grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4"
+                  : "flex-row"
+              }`}
+            >
               {searchResults.length > 0 ? (
                 searchResults
-                  .filter(result => result.platform === platform)
+                  .filter((result) => result.platform === platform)
                   .map((result, index) => (
                     <ResultCard key={index} {...result} />
                   ))
