@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import Navbar from "./components/Navbar";
 import { AppContext } from "./AppContext";
 import ResultCard from "./components/ResultCard";
-// import GoogleCard from "./components/GoogleCard";
 
 const App = () => {
   const { platform, setPlatform, searchResults } = useContext(AppContext);
