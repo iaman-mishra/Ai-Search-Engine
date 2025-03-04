@@ -63,9 +63,9 @@ const App = () => {
             </div>
           </div>
 
-          <div className="p-4 w-full shadow-md rounded-md bg-gray-100">
+          <div className="p-4 flex flex-col w-full shadow-md rounded-md bg-gray-100">
             <h1 className="text-xl font-semibold mb-6">Search Results</h1>
-            <div className="flex flex-wrap gap-4 justify-evenly">
+            <div className={`flex flex-col justify-between ${platform === "youtube" ? "grid sm:grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4" : "flex-row"}`}>
               {searchResults.length > 0 ? (
                 searchResults
                   .filter(result => result.platform === platform)
