@@ -7,8 +7,6 @@ export const AppContextProvider = ({ children }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [query, setQuery] = useState("");
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    
-  console.log(searchResults);
 
   const fetchSearchResults = async () => {
     try {
