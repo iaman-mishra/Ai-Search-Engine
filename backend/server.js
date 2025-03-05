@@ -38,8 +38,6 @@ async function searchGemini(query){
 app.post("/search", async (req,res) =>{
     const { query } = req.body;
     
-    console.log(query);
-    
     if (!query) {
         return res.json({success: false, message: "Enter a search query to search"});
     }
