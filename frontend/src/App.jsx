@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import Navbar from "./components/Navbar";
 import { AppContext } from "./AppContext";
-import ResultCard from "./components/ResultCard";
+import Ai from "./pages/Ai";
+import Goggle from "./pages/Goggle";
+import Youtube from "./pages/Youtube";
 
 const App = () => {
   const { platform, setPlatform, searchResults } = useContext(AppContext);
@@ -64,23 +66,20 @@ const App = () => {
 
           <div className="p-4 flex flex-col w-full shadow-md rounded-md bg-gray-100">
             <h1 className="text-xl font-semibold mb-6">Search Results</h1>
-            <div
+            {/* <div
               className={`flex flex-col justify-between ${
                 platform === "youtube"
                   ? "grid sm:grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4"
-                  : "flex-row"
+                  : ""
               }`}
-            >
-              {searchResults.length > 0 ? (
-                searchResults
-                  .filter((result) => result.platform === platform)
-                  .map((result, index) => (
-                    <ResultCard key={index} {...result} />
-                  ))
-              ) : (
-                <p className="text-gray-700">No results found</p>
-              )}
+            > */}
+            <div className="flex flex-col justify-between">
+              {platform === "ai" && <Ai />}
+              {platform === "google" && <Goggle />}
+              {platform === "youtube" && <Youtube />}
             </div>
+
+            {/* </div> */}
           </div>
         </div>
       </div>
