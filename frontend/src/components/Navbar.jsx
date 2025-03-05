@@ -1,13 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AppContext } from "../AppContext"; 
 
-const Navbar = () => {
-  const { searchQuery, setSearchQuery, fetchSearchResults } = useContext(AppContext);
 
+const Navbar = () => {
+  const { fetchSearchResults,query , setQuery } = useContext(AppContext);
+  
   const handleSearch = (e) => {
     e.preventDefault();
     fetchSearchResults();
   };
+
+
 
   return (
     <div className="bg-[#3d405b] flex flex-col items-center justify-between w-full pb-5 py-2 px-5 gap-2 text-[#e07a5f] ">
@@ -17,8 +20,8 @@ const Navbar = () => {
           type="text"
           placeholder="Search..."
           className="bg-gray-600 text-white p-2 rounded-md w-full max-w-[80%]"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
         <button className="bg-[#e07a5f] text-white p-2 rounded-md" type="submit">
           Search
