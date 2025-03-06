@@ -23,7 +23,7 @@ const Navbar = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button className="bg-[#e07a5f] text-white p-2 rounded-md" type="submit">
+        <button className="bg-[#e07a5f] text-white px-4 py-2 rounded-md" type="submit">
           Search
         </button>
       </form>
