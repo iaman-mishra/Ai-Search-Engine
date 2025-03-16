@@ -18,7 +18,7 @@ const SearchEngineKey = process.env.GOOGLE_CUSTOM_SEARCH_ENGINE_KEY;
 const SearchEngineCX = process.env.GOOGLE_CUSTOM_SEARCH_ENGINE_CX;
 
 async function searchYoutube(query){
-    const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${YoutubeAPI}&maxResults=10`;
+    const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${YoutubeAPI}&maxResults=20`;
     const response = await axios.get(youtubeUrl);
     return response.data.items;
 }
