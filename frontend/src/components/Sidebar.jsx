@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div
-      className={`h-screen w-full bg-gray-300 text-black flex flex-col items-center p-4 transition-all duration-300`}
+      className={`h-screen w-full bg-gray-900 text-white flex flex-col items-center p-4 transition-all duration-300`}
     >
       <div className="mb-6 flex items-center gap-2">
         <Snail className="text-blue-500" />

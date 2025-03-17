@@ -7,9 +7,9 @@ const Home = () => {
       <div className="w-[11%]">
         <Sidebar />
       </div>
-      <div className="w-full h-screen bg-gray-300 p-2">
-        <div className="flex items-center justify-center rounded-md bg-gray-200 w-full h-full">
-          <div className="text-black w-[80%]">
+      <div className="w-full h-screen bg-gray-900 p-2">
+        <div className="flex items-center justify-center rounded-md bg-gray-950 w-full h-full">
+          <div className="text-white w-[80%]">
             <div className=" flex flex-col gap-3">
               <h1 className="text-4xl font-bold">
                 Hi there, <span className="text-blue-500">Aman</span>
@@ -22,16 +22,16 @@ const Home = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-2 mt-5 mb-5">
-              <div  className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-300">
+              <div  className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-800">
                 pakistan vs new zealand
               </div>
-              <div className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-300">
+              <div className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-800">
                 severe heatwave alert
               </div>
-              <div className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-300">
+              <div className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-800">
                 ar rahman
               </div>
-              <div className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-300">
+              <div className=" hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md bg-gray-800">
                 grok
               </div>
             </div>

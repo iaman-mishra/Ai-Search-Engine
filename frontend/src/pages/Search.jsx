@@ -19,8 +19,8 @@ const Search = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col w-[calc(100%-11%)] h-full bg-gray-300 p-2">
-        <div className="flex-1 text-black px-10 py-7 rounded-md bg-gray-300 overflow-hidden">
+      <div className="flex flex-col w-[calc(100%-11%)] h-full bg-gray-900 p-2">
+        <div className="flex-1 text-white px-10 py-7 rounded-md bg-gray-950 overflow-hidden">
           <div className="h-[90%] flex flex-col overflow-y-auto scroll-smooth">
             <h1 className="text-3xl font-semibold mb-5">{qhead}</h1>
             <div className="flex items-center justify-center">
