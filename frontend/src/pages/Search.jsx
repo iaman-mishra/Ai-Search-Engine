@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import SearchBar from "../components/SearchBar";
 import AppContext from "../AppContext";
 import YoutubeCard from "../components/YoutubeCard";
-import LoadingDots from "../components/LoadingDots.JSX";
+import LoadingDots from "../components/LoadingDots.jsx";
 import { motion } from "framer-motion";
 
 const Search = () => {
